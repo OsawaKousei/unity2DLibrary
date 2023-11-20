@@ -14,19 +14,19 @@ using UnityEngine;
 public class LineWriter : MonoBehaviour
 { 
     //線の色
-    [SerializeField] Color lineColor;
+    [SerializeField] private Color lineColor;
     //線のマテリアル
-    [SerializeField] Material lineMaterial;
+    [SerializeField] private Material lineMaterial;
     //線の太さ
     [Range(0.1f, 0.5f)]
-    [SerializeField] float lineWidth;
+    [SerializeField] private float lineWidth;
 
     //描画可能領域設定
-    [SerializeField] bool lineRestriction;
-    [SerializeField] float right;
-    [SerializeField] float left;
-    [SerializeField] float bottom;
-    [SerializeField] float top;
+    [SerializeField] private bool lineRestriction;
+    [SerializeField] private float right;
+    [SerializeField] private float left;
+    [SerializeField] private float bottom;
+    [SerializeField] private float top;
 
     //LineRdenerer型のリスト宣言
     private List<LineRenderer> lineRenderers;
@@ -136,10 +136,17 @@ public class LineWriter : MonoBehaviour
     //全ての線を消去
     public void crearScreen()
     {
-        foreach (LineRenderer line in lineRenderers)
+        try
         {
-            Destroy(line);
+            foreach (LineRenderer line in lineRenderers)
+            {
+                Destroy(line);
+            }
         }
+        catch(Exception e)
+        {
+            Debug.LogError(e.ToString());
+        }
+        
     }
 }
-

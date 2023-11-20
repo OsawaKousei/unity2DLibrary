@@ -243,8 +243,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   lineColor: {r: 0, g: 0, b: 0, a: 0}
-  lineMaterial: {fileID: 0}
-  lineWidth: 0
+  lineMaterial: {fileID: 2100000, guid: 775ffe3c7f6d77b4da5840e751d3255b, type: 2}
+  lineWidth: 0.222
   lineRestriction: 0
   right: 0
   left: 0
@@ -6038,7 +6038,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
   m_AnchoredPosition: {x: 3, y: -3}
-  m_SizeDelta: {x: 24.064516, y: 25.35484}
+  m_SizeDelta: {x: 26, y: 26}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &1098546460
 MonoBehaviour:
