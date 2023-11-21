@@ -2,14 +2,19 @@ using System;
 using System.IO;
 using UnityEngine;
 
+/*
+ * 仕様：指定カメラのスクリーンショットをPNGで保存
+ * 使い方：任意の方法でcaptureScreen()を呼び出し
+ * 注意事項：ファイル名は.pngまで記述
+ */
 public class ScreenCaptor : MonoBehaviour
 {
     [SerializeField] private Camera _camera;
     [SerializeField] private string fileName;
 
-    private string filePath;
-
-    string stCurrentDir = Directory.GetCurrentDirectory();
+    public string filePath;
+    
+    private string stCurrentDir = Directory.GetCurrentDirectory();
     void Start()
     {
         filePath = stCurrentDir + fileName;
