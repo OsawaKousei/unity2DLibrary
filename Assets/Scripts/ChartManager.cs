@@ -15,7 +15,7 @@ public class ChartManager: MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
+        initializeBarChart();
     }
 
     // Update is called once per frame
@@ -65,13 +65,10 @@ public class ChartManager: MonoBehaviour
 
     public void exampleBarChart()
     {
-        var num = table.GetLength(0);
-        initializeBarChart();
-
-        for(int i = 0; i < num;) {
-            table[i, 0] = i+"番目";
-            table[i, 1] = (i*2).ToString();
-            setBarChart(table);
+        for(int i = 0; i < table.GetLength(0);i++) {
+            table[i, 0] = (i+1) +"番目";
+            table[i, 1] = ((i+1)*2).ToString();
         }
+        setBarChart(table);
     }
 }
